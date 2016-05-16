@@ -1,0 +1,37 @@
+function draw_polygon() {
+    for (var i = 0; i < 4; i++) {
+        mirobot.pendown();
+        mirobot.forward(150);
+        mirobot.penup();
+        mirobot.right(90);
+        mirobot.forward(30);
+        mirobot.left(90);
+        mirobot.pendown();
+        mirobot.back(150);
+        mirobot.penup();
+        mirobot.right(90);
+        if (i !== 3) {
+            mirobot.forward(30);
+            mirobot.left(90);
+        }
+    }
+    
+    for (var i = 0; i < 2; i++) {
+        mirobot.pendown();
+        mirobot.back(210);
+        mirobot.penup();
+        mirobot.left(90);
+        mirobot.forward(50);
+        mirobot.right(90);
+        mirobot.pendown();
+        mirobot.forward(210);
+        mirobot.penup();
+        if (i !== 1) {
+            mirobot.left(90);
+            mirobot.forward(50);
+            mirobot.right(90);
+        }
+    }
+}
+
+draw_polygon();
